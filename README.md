@@ -1,4 +1,4 @@
-<h1 align="center"><strong>Boilerplate for an Advanced GraphQL Server w/ TypeScript</strong></h1>
+<h1 align="center"><strong>Boilerplate for an Roava Mock Service</strong></h1>
 
 <br />
 
@@ -18,8 +18,6 @@
 - **No configuration overhead**: Preconfigured [`graphql-config`](https://github.com/prisma/graphql-config) setup
 - **Realtime updates**: Support for GraphQL subscriptions
 
-Read more about the idea behind GraphQL boilerplates [here](https://blog.graph.cool/graphql-boilerplates-graphql-create-how-to-setup-a-graphql-project-6428be2f3a5).
-
 ## Requirements
 
 You need to have the [GraphQL CLI](https://github.com/graphql-cli/graphql-cli) installed to bootstrap your GraphQL server using `graphql create`:
@@ -31,13 +29,10 @@ npm install -g graphql-cli
 ## Getting started
 
 ```sh
-# 1. Bootstrap GraphQL server in directory `my-app`, based on `typescript-advanced` boilerplate
-graphql create my-app --boilerplate typescript-advanced
+# 1. Clone this repo
 
-# 2. When prompted, deploy the Prisma service to a _public cluster_
-
-# 3. Navigate to the new project
-cd my-app
+# 2. Navigate to the new project
+cd roava-mock-services
 
 # 4. Start server (runs on http://localhost:4000) and open GraphQL Playground
 yarn start
@@ -71,9 +66,3 @@ yarn start
 | `　　├── resolvers` (_directory_) | _Contains the implementation of the resolvers for the application schema_ |
 | `　　└── generated` (_directory_) | _Contains generated files_ |
 | `　　　　└── prisma-client` (_directory_) | The generated Prisma client |
-
-## Contributing
-
-The GraphQL boilerplates are maintained by the GraphQL community, with official support from the [Apollo](https://www.apollographql.com/) & [Prisma](https://www.prisma.io) teams.
-
-Your feedback is **very helpful**, please share your opinion and thoughts! If you have any questions or want to contribute yourself, join the `#graphql-boilerplate` channel on our [Slack](https://slack.prisma.io/).
