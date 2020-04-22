@@ -1,4 +1,4 @@
-<h1 align="center"><strong>Boilerplate for an Roava Mock Service</strong></h1>
+<h1 align="center"><strong>Roava Mock Service</strong></h1>
 
 <br />
 
