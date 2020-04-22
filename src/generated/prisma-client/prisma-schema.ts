@@ -202,6 +202,7 @@ type User {
   password: String!
   firstname: String!
   lastname: String!
+  phoneNumber: String!
   dateOfBirth: DateTime!
 }
 
@@ -217,6 +218,7 @@ input UserCreateInput {
   password: String!
   firstname: String!
   lastname: String!
+  phoneNumber: String!
   dateOfBirth: DateTime!
 }
 
@@ -236,6 +238,8 @@ enum UserOrderByInput {
   firstname_DESC
   lastname_ASC
   lastname_DESC
+  phoneNumber_ASC
+  phoneNumber_DESC
   dateOfBirth_ASC
   dateOfBirth_DESC
 }
@@ -246,6 +250,7 @@ type UserPreviousValues {
   password: String!
   firstname: String!
   lastname: String!
+  phoneNumber: String!
   dateOfBirth: DateTime!
 }
 
@@ -272,6 +277,7 @@ input UserUpdateInput {
   password: String
   firstname: String
   lastname: String
+  phoneNumber: String
   dateOfBirth: DateTime
 }
 
@@ -280,6 +286,7 @@ input UserUpdateManyMutationInput {
   password: String
   firstname: String
   lastname: String
+  phoneNumber: String
   dateOfBirth: DateTime
 }
 
@@ -354,6 +361,20 @@ input UserWhereInput {
   lastname_not_starts_with: String
   lastname_ends_with: String
   lastname_not_ends_with: String
+  phoneNumber: String
+  phoneNumber_not: String
+  phoneNumber_in: [String!]
+  phoneNumber_not_in: [String!]
+  phoneNumber_lt: String
+  phoneNumber_lte: String
+  phoneNumber_gt: String
+  phoneNumber_gte: String
+  phoneNumber_contains: String
+  phoneNumber_not_contains: String
+  phoneNumber_starts_with: String
+  phoneNumber_not_starts_with: String
+  phoneNumber_ends_with: String
+  phoneNumber_not_ends_with: String
   dateOfBirth: DateTime
   dateOfBirth_not: DateTime
   dateOfBirth_in: [DateTime!]

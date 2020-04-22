@@ -5,9 +5,19 @@ type Query {
 }
 
 type Mutation {
-  signup(email: String!, password: String!, firstname: String!, lastname: String!, dateOfBirth: DateTime!): AuthPayload!
+  signup(
+    email: String!, 
+    password: String!, 
+    firstname: String!, 
+    lastname: String!, 
+    phoneNumber:String!, 
+    dateOfBirth: DateTime!
+    ): AuthPayload!
+
   login(email: String!, password: String!): AuthPayload!
+
   sendOtp(querier: String!): SendOtpPayload!
+  
   verifyOtp(querier: String!, code: String!): OtpVerificationPayload!
 }
 
