@@ -37,6 +37,7 @@ yarn start
 ![](https://imgur.com/hElq68i.png)
 
 ## Documentation
+To see the available endpoints click on the schema tab in the playground console.
 
 ### Commands
 
