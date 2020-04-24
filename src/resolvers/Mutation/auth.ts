@@ -27,7 +27,7 @@ export const auth = {
 
     const valid = await bcrypt.compare(password, user.password)
     if (!valid) {
-      throw new Error('Invalid password')
+      throw new Error('Invalid credentials')
     }
 
     return {

@@ -6,13 +6,32 @@ export const otp = {
 
         const otp = await ctx.prisma.createOtp({ code, querier });
     
+        if(!otp) throw new Error('Could not send otp');
+
         return {
-                    isSent: otp ? true: false,
-                    message: otp ? 'Successful': 'Could not create otp',
+                    message: 'Successful',
                     code: otp.code,
                 };
         
       },
+
+    async sendRegistrationOtp(parent, { querier }, ctx: Context) {
+        const user = await ctx.prisma.user({ email: querier});
+
+        if(user) 
+            throw new Error('The email address you provided has been taken');
+
+        const code = randomString(6, '0123456789'); 
+            
+        const otp = await ctx.prisma.createOtp({ code, querier });
+    
+        if(!otp) throw new Error('Could not send otp');
+    
+        return {
+                    message: 'Successful',
+                    code: otp.code,
+                };
+    },
 
     async verifyOtp(parent, {code, querier}, ctx: Context) {
         const otp = await ctx.prisma.otp({code});
