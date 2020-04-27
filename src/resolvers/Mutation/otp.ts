@@ -51,10 +51,7 @@ export const otp = {
             }
         }
 
-        return {
-            isValid: otp ? true: false,
-            message: otp ? 'Successful': 'Invalid Otp'
-        }
+        throw new Error('Invalid Otp');
         
     }
 }
